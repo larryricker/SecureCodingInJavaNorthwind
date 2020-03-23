@@ -9,7 +9,7 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "employees", path = "employees")
+@RepositoryRestResource(collectionResourceRel = "restemployees", path = "restemployees")
 public interface EmployeesRestRepository extends PagingAndSortingRepository<Employees, Short> {
 	List<Employees> findByEmployeeID(@Param("employeeID") Short employeeID);
 	List<Employees> findByLastName(@Param("lastName") String lastName);

@@ -20,7 +20,7 @@ public class Orders {
 	
 	protected Orders() {}
 	
-	public Orders(long orderID, String customerID, Integer employeeID, Timestamp orderDate
+	public Orders(Long orderID, String customerID, Integer employeeID, Timestamp orderDate
 			, Timestamp requiredDate, Timestamp shippedDate, Integer shipVia, BigDecimal freight
 			, String shipName, String shipAddress, String shipCity, String shipRegion
 			, String shipPostalCode, String shipCountry) {
@@ -52,7 +52,7 @@ public class Orders {
 	@Id
 	// @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="\"OrderID\"", table="orders")
-	private long orderID;
+	private Long orderID;
 	@Column(name="\"CustomerID\"", table="orders")
 	private String customerID;
 	@Column(name="\"EmployeeID\"", table="orders")
@@ -79,10 +79,10 @@ public class Orders {
 	private String shipPostalCode;
 	@Column(name="\"ShipCountry\"", table="orders")
 	private String shipCountry;
-	public long getOrderID() {
+	public Long getOrderID() {
 		return orderID;
 	}
-	public void setOrderID(long orderID) {
+	public void setOrderID(Long orderID) {
 		this.orderID = orderID;
 	}
 	public String getCustomerID() {

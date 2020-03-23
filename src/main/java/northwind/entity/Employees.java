@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Timestamp;
 
 
@@ -17,21 +20,23 @@ import java.sql.Timestamp;
 @Entity
 @Table(name="employees")
 public class Employees {
+	private static final Logger LOGGER = LogManager.getLogger(Employees.class.getClass());
+
+	public Employees() {}
 	
-	protected Employees() {}
-	
-	public Employees(short employeeID, String firstName, String lastName, String title
+	public Employees(Short employeeID, String firstName, String lastName, String title
 			, String titleOfCourtesy, Timestamp birthDate, Timestamp hireData, String address
 			, String city, String state, String postalCode, String region, String country
 			, String homePhone, String extension, byte[] photo, String notes
 			, short reportsTo, String photoPath) {
+		LOGGER.info("Employees.constructor");
 		this.setEmployeeID(employeeID);
 		this.setFirstName(firstName);
 		this.setLastName(lastName);
 		this.setTitle(title);
 		this.setTitleOfCourtesy(titleOfCourtesy);
 		this.setBirthDate(birthDate);
-		this.setHireDate(hireData);
+		this.setHireDate(hireDate);
 		this.setAddress(address);
 		this.setCity(city);
 		this.setPostalCode(postalCode);
@@ -47,6 +52,7 @@ public class Employees {
 
 	@Override
 	public String toString() {
+		LOGGER.info("Employees.toString()");
 		return "employees [employeeId=" + employeeID + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", title=" + title + ", titleOfCourse=" + titleOfCourtesy + ", birthDate=" + birthDate + ", hireDate="
 				+ hireDate + ", address=" + address + ", city=" + city + ", postalCode="
@@ -58,7 +64,7 @@ public class Employees {
 	@Id
 	// @GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="\"EmployeeID\"", table="employees")
-	private short employeeID;
+	private Short employeeID;
 	@Column(name="\"FirstName\"", table="employees")
 	private String firstName;
 	@Column(name="\"LastName\"", table="employees")
@@ -94,10 +100,10 @@ public class Employees {
 	@Column(name="\"PhotoPath\"", table="employees")
 	private String photoPath;
 
-	public short getEmployeeID() {
+	public Short getEmployeeID() {
 		return employeeID;
 	}
-	public void setEmployeeID(short employeeID) {
+	public void setEmployeeID(Short employeeID) {
 		this.employeeID = employeeID;
 	}
 	public String getFirstName() {

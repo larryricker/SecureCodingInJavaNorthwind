@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * @author larryricker
@@ -15,7 +17,8 @@ import javax.persistence.Table;
 @Entity
 @Table(name="customerdemographics")
 public class CustomerDemographics {
-	
+	private static final Logger LOGGER = LogManager.getLogger(CustomerDemographics.class.getClass());
+
 	protected CustomerDemographics() {}
 	
 	public CustomerDemographics(String customerTypeID, String customerDesc) {

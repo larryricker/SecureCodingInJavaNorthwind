@@ -21,8 +21,8 @@ import org.junit.jupiter.api.Test;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-class SQLInjectionTest {
-	private static final Logger LOGGER = LogManager.getLogger(SQLInjectionTest.class.getClass());
+class TestSQLInjection {
+	private static final Logger LOGGER = LogManager.getLogger(TestSQLInjection.class.getClass());
 	private Connection con;
 
 	@BeforeAll

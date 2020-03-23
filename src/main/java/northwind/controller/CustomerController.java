@@ -14,7 +14,7 @@
 //import org.apache.logging.log4j.Logger;
 //
 //@RestController
-//@RequestMapping("customers")
+//@RequestMapping("restcustomers")
 //public class CustomerController {
 //	private static final Logger LOGGER = LogManager.getLogger(CustomerController.class.getClass());
 //

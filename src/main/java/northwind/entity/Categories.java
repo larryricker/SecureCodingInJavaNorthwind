@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 /**
  * @author larryricker
@@ -15,6 +18,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="categories")
 public class Categories {
+	private static final Logger LOGGER = LogManager.getLogger(Categories.class.getClass());
 
 	protected Categories() {}
 	

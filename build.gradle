@@ -100,6 +100,11 @@ dependencies {
     // Let's get some rest
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.data:spring-data-commons'
+    // Thyme Leaf Dependency
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // Spring Boot Dependencies
+    implementation 'org.springframework.boot:spring-boot-dependencies:2.2.5.RELEASE'
+    
     // support for servlet for SQL injection test - ordersServlet
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
     
@@ -112,6 +117,10 @@ dependencies {
 
 	implementation 'org.apache.logging.log4j:log4j-api:2.6.1'
 	implementation 'org.apache.logging.log4j:log4j-core:2.6.1'
+	
+	// JSTL from 2015
+	// implementation 'org.apache.taglibs:taglibs-standard:1.2.5'
+	// implementation("org.apache.taglibs:taglibs-build-tools:1.2.5")
 	
 	// SessionScoped 2020 version of beans JRE 12
 	// implementation 'com.guicedee.services:jakarta.enterprise.cdi-api:1.0.2.3-jre12'
@@ -132,11 +141,11 @@ dependencies {
     //testImplementation 'javax.servlet:servlet-api:2+'
     //testImplementation 'javax.ws.rs:javax.ws.rs-api:2+'
     //testImplementation 'javax:javaee-api:8.+'
-    // testCompile 'org.junit.platform:junit-platform-gradle-plugin:1.+'
-    testCompile 'org.junit.platform:junit-platform-gradle-plugin:1.2.0'
+    // testImplementation 'org.junit.platform:junit-platform-gradle-plugin:1.+'
+    testImplementation 'org.junit.platform:junit-platform-gradle-plugin:1.2.0'
     
-    // testCompile 'org.junit.jupiter:junit-jupiter-api:5.1.0'
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    // testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     // testRuntime 'org.junit.jupiter:junit-jupiter-engine:5.1.0', 
     // 	'org.junit.platform:junit-platform-launcher:1.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.0',
@@ -204,8 +213,12 @@ test {
 
 
 jacoco {
-	toolVersion = "0.7.4.201502262128"	
+// java.lang.RuntimeException: Class java/util/UUID could not be instrumented.
+//	toolVersion = "0.7.4.201502262128"	
+//	toolVersion = "0.8.5"	
+	toolVersion = "0.8.0"	
 }
+
 
 jacocoTestReport {
 	reports {

@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "test"
-curl http://localhost:8080/customers/test
+echo "restcustomers/test"
+curl http://localhost:8080/restcustomers/test
 echo ""
-echo "customer"
-curl http://localhost:8080/customers/customer?id=1
+echo "restcustomers/customer"
+curl http://localhost:8080/restcustomers/customer?id=1
 echo ""
-echo "customers"
-curl http://localhost:8080/customers/customers?ids=1,2,3,4
+echo "restcustomers/customers"
+curl http://localhost:8080/restcustomers/customers?ids=1,2,3,4

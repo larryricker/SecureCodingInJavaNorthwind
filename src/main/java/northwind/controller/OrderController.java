@@ -15,7 +15,7 @@ public class OrderController {
     @RequestMapping("/order")  
     public String display(Model m)  
     {  
-        m.addAttribute("ord", new Orders(0, "", null, null, null, null, null, null, "", null, null, null, null, null));  
+        m.addAttribute("ord", new Orders(0l, "", null, null, null, null, null, null, "", null, null, null, null, null));  
         return "viewpage";  
     }  
     @RequestMapping("/ordersearch")  

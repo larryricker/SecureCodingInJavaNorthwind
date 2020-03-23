@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 
@@ -37,7 +38,7 @@ public class SpringBootDemoApplication extends SpringBootServletInitializer {
 
 @SpringBootApplication
 // @EnableSwagger2
-// @ComponentScan(basePackages = {"northwind.entity"})
+ @ComponentScan(basePackages = {"northwind.entity", "northwind.controller", "northwind.converters", "northwind.form", "northwind.service", "northwind.service.impl", "northwindWeb"})
 // @EnableJpaRepositories(basePackageClasses = EmployeesRepository.class)
 public class NorthwindDataJpaApplication {
 	

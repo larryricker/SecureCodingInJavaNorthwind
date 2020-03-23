@@ -7,11 +7,11 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(collectionResourceRel = "orders", path = "orders")
+@RepositoryRestResource(collectionResourceRel = "restorders", path = "restorders")
 public interface OrdersRestRepository extends PagingAndSortingRepository<Orders, Long> {
 
 	@Query("SELECT o FROM Orders o WHERE orderID = :orderID")
-	Orders findByOrderID(@Param("orderID") long orderID);
+	Orders findByOrderID(@Param("orderID") Long orderID);
 	
 	// working query in pgAdmin tool:
 	// select * from public.orders where "CustomerID" = 'VINET'
