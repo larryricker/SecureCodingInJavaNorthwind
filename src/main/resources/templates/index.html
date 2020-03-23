@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+		<head>
+		<title><ui:insert name="pageTitle">Northwind Application</ui:insert></title>
+		<style type="text/css">
+			body {
+				  font-family: Verdana, Arial, Helvetica, sans-serif;
+				  font-size: 14px;
+			}
+			.header {
+				  font-family: Verdana, Arial, Helvetica, sans-serif;
+				  font-size: 18px;
+			}
+			.bottom {
+				  font-family: Verdana, Arial, Helvetica, sans-serif;
+				  font-size: 9px;
+				  text-align: center;
+				  vertical-align: middle;
+				  color: #8E969D;
+			}
+		</style>
+		</head>
+
+<body bgcolor="#ffffff">
+<table style="border:1px solid #CAD6E0"  align="center" cellpadding="0" cellspacing="0" border="0" width="400">
+<tbody>
+
+	<tr>
+		<td class="header" height="42" align="center" valign="middle" width="100%" bgcolor="#E4EBEB">
+			<ui:insert name="pageHeader">Northwind Application (templates/index.html)</ui:insert>
+		</td>
+	</tr>
+	<tr>
+		<td height="1" width="100%" bgcolor="#CAD6E0"></td>
+	</tr>	
+
+	<tr>
+		<td width="100%"  colspan="2">
+			<table width="100%" style="height:150px" align="left" cellpadding="0" cellspacing="0" border="0">
+			<tbody>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a th:href="@{/restlinks}">Rest Links</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a th:href="@{/thymelinks}">Thyme Links</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="categories.xhtml">Categories</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="customer_customer_demo.xhtml">Customer Customer Demo</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="customer_demographics.xhtml">Customer Demographics</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="customers.xhtml">Customers</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="employees.xhtml">Employees</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="jstl/employeesjstl.jsp">Employees JSTL</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="employees_jstl_1_1.xhtml">Employees JSTL 1.1</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="/employees/List">Employees List Employees Rest Endpoint</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="/employees/show/101">Employees Show 1 Rest Endpoint</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="employee_territories.xhtml">Employee Territories</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="orders.xhtml">Orders</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="ordersearch.xhtml">Order Search</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="ordersearch.jsp">Order Search JSP</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="order_details.xhtml">Order Details</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="products.xhtml">Products</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="shippers.xhtml">Shippers</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="suppliers.xhtml">Suppliers</a></ui:insert>
+					
+					</td>
+				</tr>
+				<tr>
+					<td align="center" width="100%" valign="middle">
+					
+					<ui:insert name="body"><br></br><a href="territories.xhtml">Territories</a></ui:insert>
+					
+					</td>
+				</tr>
+			</tbody>
+			</table>
+		</td>
+	</tr>	
+	
+	<tr>
+		<td colspan="2"  valign="bottom" height="1" width="100%" bgcolor="#CAD6E0"></td>
+	</tr>
+	<tr>
+		<td th:replace="template :: footer"></td>
+	</tr>
+</tbody>
+</table>
+</body>
+</html>

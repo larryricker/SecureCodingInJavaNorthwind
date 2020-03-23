@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Core Online Tutorial - List Employees</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+    <div th:if="${not #lists.isEmpty(employees)}">
+        <h2>Employees List</h2>
+        <table class="table table-striped">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Title</th>
+                <th>Title Of Courtesy</th>
+                <th>Birth Date</th>
+                <th>Hire Date</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Postal Code</th>
+                <th>Region</th>
+                <th>Country</th>
+                <th>Home Phone</th>
+                <th>Extension</th>
+                <th>Photo</th>
+                <th>Notes</th>
+                <th>Reports To</th>
+                <th>Photo Path</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="employee : ${employees}">
+                <td th:text="${employee.employeeID}"></td>
+                <td th:text="${employee.firstName}"></td>
+                <td th:text="${employee.lastName}"></td>
+                <td th:text="${employee.title}"></td>
+                <td th:text="${employee.titleOfCourtesy}"></td>
+                <td th:text="${employee.birthDate}"></td>
+                <td th:text="${employee.hireDate}"></td>
+                <td th:text="${employee.address}"></td>
+                <td th:text="${employee.city}"></td>
+                <td th:text="${employee.postalCode}"></td>
+                <td th:text="${employee.region}"></td>
+                <td th:text="${employee.country}"></td>
+                <td th:text="${employee.homePhone}"></td>
+                <td th:text="${employee.extension}"></td>
+                <td th:text="${employee.photo}"></td>
+                <td th:text="${employee.notes}"></td>
+                <!--  td th:text="${employee.reportsTo}"></td -->
+                <td th:text="${employee.photoPath}"></td>
+                <td><a th:href="${'/employees/show/' + employee.employeeID}">View</a> </td>
+                <td><a th:href="${'/employees/edit/' + employee.employeeID}">Edit</a> </td>
+                <td><a th:href="${'/employees/delete/' + employee.employeeID}">Delete</a> </td>
+            </tr>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="/employees/new">New Employees</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Core Online Tutorial - Show Employee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Show Product</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8">
+            <form class="form-horizontal">
+            	<!--  employeeID -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Employee Id:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.employeeID}">Employee Id</p>
+                    </div>
+                </div>
+                <!--  firstName -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">First Name:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.firstName}">First Name</p>
+                    </div>
+                </div>
+                <!--  lastName -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Last Name:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.lastName}">Last Name</p>
+                    </div>
+                </div>
+                <!--  title -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Title:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.title}">Title</p>
+                    </div>
+                </div>
+                <!--  titleOfCourtesy -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Title Of Courtesy:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.titleOfCourtesy}">Title Of Courtesy</p>
+                    </div>
+                </div>
+                <!--  birthDate -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Birth Date:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.birthDate}">Birth Date</p>
+                    </div>
+                </div>
+                <!--  hireDate -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Hire Date:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.hireDate}">Hire Date</p>
+                    </div>
+                </div>
+                <!--  address -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Address:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.address}">Address</p>
+                    </div>
+                </div>
+                <!--  city -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">City:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.city}">City</p>
+                    </div>
+                </div>
+                <!--  postalCode -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Postal Code:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.postalCode}">Postal Code</p>
+                    </div>
+                </div>
+                <!--  region -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Region:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.region}">Region</p>
+                    </div>
+                </div>
+                <!--  country -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Country:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.country}">Country</p>
+                    </div>
+                </div>
+                <!--  homePhone -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Home Phone:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.homePhone}">Home Phone</p>
+                    </div>
+                </div>
+                <!--  extension -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Extension:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.extension}">Extension</p>
+                    </div>
+                </div>
+                <!--  photo -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Photo:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.photo}">Photo</p>
+                    </div>
+                </div>
+                <!--  notes -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Notes:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.notes}">Notes</p>
+                    </div>
+                </div>
+                <!--  reportsTo -->
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Reports To:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.reportsTo}">Reports To</p>
+                    </div>
+                </div>
+                <!--  photoPath -->
+                <div class="form-group">
+                    <label class="col-sm-2 sm-2 control-label">Photo Path:</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static" th:text="${employee.photoPath}">Photo Path</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

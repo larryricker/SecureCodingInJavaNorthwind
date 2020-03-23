@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Spring Core Online Tutorial - Employees Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+          rel="stylesheet" media="screen"/>
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+    <link href="../../static/css/spring-core.css"
+          th:href="@{css/spring-core.css}" rel="stylesheet" media="screen"/>
+</head>
+<body>
+<div class="container">
+
+    <h2>Employees Details</h2>
+    <div>
+        <form class="form-horizontal" th:object="${employeesForm}" th:action="@{/employees}" method="post">
+
+            <div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+                <p th:text="#{form.hasErrors}">Error Message</p>
+            </div>
+
+            <!--  input type="hidden" th:field="*{employeeID}"/ -->
+
+<!--  employeeID -->
+            <div class="form-group" th:class="${#fields.hasErrors('employeeID')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Employee ID:</label>
+                <div class="col-sm-10">
+                    <input type="number" min="0" max="5000" step="1" class="form-control" th:field="*{employeeID}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('employeeID')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+
+<!--  firstName -->
+            <div class="form-group" th:class="${#fields.hasErrors('firstName')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">First Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{firstName}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('firstName')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  lastName -->
+            <div class="form-group" th:class="${#fields.hasErrors('lastName')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Last Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{lastName}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('lastName')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  title -->
+            <div class="form-group" th:class="${#fields.hasErrors('title')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Title:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{title}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('title')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  titleOfCourtesy -->
+            <div class="form-group" th:class="${#fields.hasErrors('titleOfCourtesy')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Title Of Courtesy:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{titleOfCourtesy}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('titleOfCourtesy')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  birthDate -->
+            <div class="form-group" th:class="${#fields.hasErrors('birthDate')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Birth Date:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{birthDate}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('birthDate')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  hireDate -->
+            <div class="form-group" th:class="${#fields.hasErrors('hireDate')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Hire Date:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{hireDate}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('hireDate')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  address -->
+            <div class="form-group" th:class="${#fields.hasErrors('address')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Address:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{address}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('address')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  city -->
+            <div class="form-group" th:class="${#fields.hasErrors('city')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">City:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{city}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('city')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  postalCode -->
+            <div class="form-group" th:class="${#fields.hasErrors('postalCode')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Postal Code:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{postalCode}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('postalCode')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  region -->
+            <div class="form-group" th:class="${#fields.hasErrors('region')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Region:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{region}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('region')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  country -->
+            <div class="form-group" th:class="${#fields.hasErrors('country')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Country:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{country}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('country')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  homePhone -->
+            <div class="form-group" th:class="${#fields.hasErrors('homePhone')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Home Phone:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{homePhone}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('photoPath')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  extension -->
+            <div class="form-group" th:class="${#fields.hasErrors('extension')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Extension:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{extension}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('extension')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  photo -->
+            <div class="form-group" th:class="${#fields.hasErrors('photo')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Photo:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{photo}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('photo')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  notes -->
+            <div class="form-group" th:class="${#fields.hasErrors('notes')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Notes:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{notes}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('notes')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+<!--  reportsTo -->
+            <div class="form-group" th:class="${#fields.hasErrors('reportsTo')} ? 'form-group has-error' : 'form-group'">
+                <label class="col-sm-2 control-label">Reports To:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" th:field="*{reportsTo}" th:errorclass="has-error"/>
+
+                    <span class="help-block">
+                       <ul>
+                           <li th:each="err : ${#fields.errors('reportsTo')}" th:text="${err}" />
+                       </ul>
+                    </span>
+                </div>
+            </div>
+
+            <div class="row">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
