@@ -89,7 +89,7 @@ public class EmployeesController {
     	LOGGER.info("EmployeesController.setEmployeesService");
     	this.employeesService = employeesService;
     }
-    @RequestMapping("/")
+    @RequestMapping("/allemployees")
     public String redirToList() {
     	LOGGER.info("EmployeesController.redirToList()");
     	return "redirect:/employees/list";
